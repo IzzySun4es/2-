@@ -12,6 +12,7 @@ body{
     --main-color: #29251C;
     --pink-color: #E93F68;
     --secondary-color: #F29CB0;
+    --secon-color: rgba(242, 156, 176, 0.4);
     --green-color: #89A8A2;
 }
 
@@ -42,7 +43,7 @@ header{
     max-width: 940px;
     max-height: 52px;
     border: none;
-    background-color: rgba(242, 156, 176, 0.4);
+    background-color: var(--secon-color);
 
 }
 .menu{
@@ -181,17 +182,75 @@ header ul li a{
 }
 .content-4 p:nth-child(2){
     font-size: 1.25rem;
-    margin: 30px 0 35px 0;
+    margin: 24px 0 20px 0;
     opacity: .7;
+}
+.catalog{
+    margin-bottom: 58px;
 }
 .catalog ul{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
 
     list-style: none;
-    width: 821px;
+    max-width: 100%;
+    height: 47px;
+    background-color: var(--secon-color);
+}
+.catalog li{
+    opacity: .7;
+}
+.catalog li:nth-child(1){
+    background-color: var(--pink-color);
+    padding: 14px 50px;
+    margin-left: -40px;
+
 }
 .cakes{
     display: flex;
     flex-wrap: wrap;
+}
+.content-cake{
+    margin-right: 20px;
+}
+.content-cake:nth-child(4n){
+    margin-right: 0px;
+}
+.set-first{
+    padding: 10px 74px;
+    background-color: var(--secon-color);
+    border: var(--secon-color) 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 22px 0 15px;
+    font-size: 1.25rem;
+    font-family: 'Lato' sans-serif;
+}
+.set{
+    padding: 10px 74px;
+    border: 1px solid var(--green-color);
+    margin: 22px 0 15px;
+    font-size: 1.25rem;
+}
+.content-button{
+    display: flex;
+    justify-content: space-between;
+}
+.korsina{
+    padding: 6px 35px;
+    border: none;
+    background-color: var(--pink-color);
+    color: white;
+    opacity: .9;
+}
+button.korsina{
+    font-size: 0.94;
+}
+.plus{
+    border: var(--green-color) 1px solid;
+    padding: 6px 15px;
+}
+hr{
+    border: 1px solid var(--green-color);
+    margin: 47px 0 63px 0;
 }
