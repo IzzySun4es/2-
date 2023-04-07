@@ -30,7 +30,7 @@ h1{
 p{
     font-size: 16px;
 }
-h1,p{
+h1,p, h6{
     color: var(--main-color);
 }
 .container{
@@ -44,7 +44,6 @@ header{
     max-height: 52px;
     border: none;
     background-color: var(--secon-color);
-
 }
 .menu{
     display: flex;
@@ -174,16 +173,17 @@ header ul li a{
     margin-bottom: 30px;
     opacity: .7;
 }
-.content-3 h1, .content-3 p, .content-4 h1, .content-4 p{
+.content-3 h1, .content-3 p, .content-4 h1, .content-4 p, .content-5 h1{
     text-align: center;
 }
 .content-3 p:nth-child(4){
     margin-bottom: 120px;
 }
-.content-4 p:nth-child(2){
+
+.content-4 p{
     font-size: 1.25rem;
     margin: 24px 0 20px 0;
-    opacity: .7;
+    font-family: 'Lato' sans-serif;
 }
 .catalog{
     margin-bottom: 58px;
@@ -214,9 +214,6 @@ header ul li a{
 .content-cake{
     margin-right: 20px;
 }
-.content-cake p{
-    font-family: 'Lato' sans-serif;
-}
 .content-cake:nth-child(4n){
     margin-right: 0px;
 }
@@ -227,13 +224,15 @@ header ul li a{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 22px 0 15px;
     font-size: 1.25rem;
-    font-family: 'Lato' sans-serif;
+    opacity: .7;
 }
 .set{
     padding: 10px 74px;
     border: 1px solid var(--green-color);
     margin: 22px 0 15px;
     font-size: 1.25rem;
+    opacity: .7;
+    color: var(--pink-color);
 }
 .content-button{
     display: flex;
@@ -245,15 +244,60 @@ header ul li a{
     background-color: var(--pink-color);
     color: white;
     opacity: .9;
-}
-button.korsina{
-    font-size: 0.94;
+    font-size: 0.9rem;
 }
 .plus{
     border: var(--green-color) 1px solid;
     padding: 6px 15px;
+    color: var(--pink-color);
+    opacity: .7;
+    font-size: 0.9rem;
 }
 hr{
     border: 1px solid var(--green-color);
     margin: 47px 0 63px 0;
+}
+.slaid{
+    font-size: 1.25rem;
+    color: var(--pink-color);
+    margin: 40px 0 120px 0;
+    text-align  : center;
+}
+.reviews{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.reviews ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.reviews ul li{
+    margin: 20px 3px 0 3px;
+}
+.content-reviews{
+    max-width: 300px;
+    height: 167px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 35px 21px;
+    margin-bottom: 37px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    opacity: .7;
+}
+.content-reviews:nth-child(2n){
+    background-color: var(--green-color);
+    opacity: .7;
+}
+.content-reviews p{
+    font-size: 0.75rem;
+}
+.content-5 h1{
+    margin-bottom: 60px;
 }
