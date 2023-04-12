@@ -362,3 +362,9 @@ hr{
 
     z-index: -1;
 }
+.content-7{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 575px;
+}
