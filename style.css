@@ -43,6 +43,7 @@ header{
     max-height: 52px;
     border: none;
     background-color: var(--secon-color);
+    margin-top: 45px;
 }
 header ul{
     display: flex;
@@ -437,5 +438,75 @@ hr{
 @media screen and (max-width: 666px) {
     .reviews{
         justify-content: center;
+    }
+}
+button.burger{
+    border: none;
+    width: 40px;
+    height: 28px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transform: translateX(0px);
+    transition: .3s;
+}
+button.burger.open{
+    transform: translateX(-20px);
+}
+button.burger .line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: .3s;
+}
+button.burger.open .line-2{
+    width: 0px;
+}
+button.burger.open .line-1{
+   transform: rotateZ(45deg) translateX(45%);
+}
+button.burger.open .line-3{
+    transform: rotateZ(-45deg) translateX(45%);
+}
+@media screen and (max-width:576px){
+    header{
+        background: none;
+    }
+    header ul{
+        top: 100px;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 200px;
+        background: white;
+        z-index: 2;
+        padding: 20px 10px;
+        width: 100px;
+
+        transform: translateY(100%);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: .3s;
+    }
+    header ul.menu.open{
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+        border-radius: 10px;
+    }
+    button.burger{
+        display: flex;
+    }
+    header ul li a.active{
+        border: none;
+        background: none;
+        padding: 0;
+    }
+    header ul li:nth-child(1){
+        display: none;
     }
 }
