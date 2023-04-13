@@ -410,6 +410,9 @@ hr{
 
     z-index: -1;
 }
+select{
+    display: none;
+}
 @media screen and (max-width: 768px) {
     :root{
         font-size: 14px;
@@ -438,6 +441,20 @@ hr{
 @media screen and (max-width: 666px) {
     .reviews{
         justify-content: center;
+    }
+    .catalog{
+        background: none;
+        display: flex;
+        justify-content: center;
+    }
+    .catalog ul{
+        display: none;
+    }
+    select{
+        border: none;
+        display: flex;
+        background-color: var(--secondary-color);
+        padding: 14px 50px;
     }
 }
 button.burger{
