@@ -111,8 +111,8 @@ header ul li a{
     text-align: center;
 }
 
-.content-2 h1{
-    margin: 220px 0 70px 0;
+.content-2 h1, .content-4 h1, .content-5 h1, .content-6 h1{
+    margin: 170px 0 70px 0;
     text-align: center;
 
 }
@@ -158,7 +158,7 @@ header ul li a{
     align-items: center;
 }
 .content-3 h1{
-    margin: 220px 0 60px 0;
+    margin: 300px 0 60px 0;
 }
 .content-3 p{
     font-size: 1.25rem;
@@ -169,10 +169,10 @@ header ul li a{
 .content-3 h1, .content-3 p, .content-4 h1, .content-4 p, .content-5 h1, .content-6 h1{
     text-align: center;
 }
-.content-3 p:nth-child(4){
-    margin-bottom: 120px;
+.content-4 h1{
+    margin: 0;
+    margin-top: 170px;
 }
-
 .content-4 p{
     font-size: 1.25rem;
     margin: 24px 0 20px 0;
@@ -203,6 +203,7 @@ header ul li a{
 .cakes{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .content-cake{
     margin-right: 20px;
@@ -253,7 +254,7 @@ hr{
 .slaid{
     font-size: 1.25rem;
     color: var(--pink-color);
-    margin: 40px 0 120px 0;
+    margin-top: 40px;
     text-align  : center;
 }
 .reviews{
@@ -298,10 +299,10 @@ hr{
     border: 2px solid var(--pink-color);
     padding: 29px 0 39px 0;
     max-width: 100%;
-    margin-bottom: 160px;
+    margin: 170px 0;
 }
 .content-6 h1{
-    margin-bottom: 25px;
+    margin: 30px 0 25px 0;
 }
 .form{
     display: flex;
@@ -349,7 +350,7 @@ hr{
     content: '';
     display: block;
     position: absolute;
-    top: 4615px;
+    top: 4424px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -402,7 +403,7 @@ hr{
     content: '';
     display: block;
     position: absolute;
-    top: 5247px;
+    top: 5083px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -410,7 +411,7 @@ hr{
 }
 @media screen and (max-width: 768px) {
     :root{
-        font-size: 13px;
+        font-size: 14px;
     }
     .container{
         max-width: 90%;
@@ -426,6 +427,15 @@ hr{
     .content-2::before{
         height: 1070px;
         background-position: center;
-        top: 610px;
+        top: 575px;
+    }
+    .content-6::before{
+        background-position: center;
+        top: 5788px;
+    }
+}
+@media screen and (max-width: 666px) {
+    .reviews{
+        justify-content: center;
     }
 }
