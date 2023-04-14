@@ -170,6 +170,11 @@ header ul li a{
 .content-3 h1, .content-3 p, .content-4 h1, .content-4 p, .content-5 h1, .content-6 h1{
     text-align: center;
 }
+.content-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .content-4 h1{
     margin: 0;
     margin-top: 170px;
@@ -181,13 +186,11 @@ header ul li a{
 }
 #catalog{
     margin-bottom: 58px;
-    max-width: 100%;
     max-height: 47px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 850px; 
+    background: var(--secon-color);
 }
 .cakes{
     display: flex;
@@ -205,9 +208,10 @@ header ul li a{
 .btn {
     border: none;
     outline: none;
-    padding: 12px 40px;
     cursor: pointer;
     background: none;
+    padding: 12px 20px;
+
 }
   
   /* Добавить светло-серый фон на наведении курсора мыши */
@@ -219,8 +223,9 @@ header ul li a{
 .btn.active {
     background-color: #E93F68;
     color: white;
+    padding: 12px 40px;
 }
-.set.active{
+.set:hover{
     padding: 10px 74px;
     background-color: var(--secon-color);
     border: var(--secon-color) 1px solid;
@@ -314,32 +319,34 @@ hr{
 .content-6 h1{
     margin: 30px 0 25px 0;
 }
-.form{
+form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.form input{
+input[type=text]{
     padding: 18px 40px;
     border: 1px solid var(--pink-color);
     margin-top: 35px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: var(--pink-color);
     font-size: 1.25rem;
+    resize: vertical;
 }
-.form button{
-    width: 253px;
+input[type=submit]{
+    width: 290px;
     height: 60px;
     background: var(--pink-color);
     border: none;
-
     font-size: 1.5rem;
     color: white;
-
-    margin: 28px 0 17px ;
+    margin: 28px 0 17px 0;
 }
+input[type=submit]:hover {
+    background-color: #a82340;
+  }
 .form p{
     font-size: 0.75rem;
 }
@@ -451,12 +458,12 @@ select{
     .reviews{
         justify-content: center;
     }
-    .catalog{
+    #catalog{
         background: none;
         display: flex;
         justify-content: center;
     }
-    .catalog ul{
+    .btn{
         display: none;
     }
     select{
@@ -535,4 +542,9 @@ button.burger.open .line-3{
     header ul li:nth-child(1){
         display: none;
     }
+}
+.sticky {
+    position: fixed;
+    top: -45px;
+    width: 90%;
 }

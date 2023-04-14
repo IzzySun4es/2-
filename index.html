@@ -14,7 +14,7 @@
 <body>
 
         <div class="container">
-            <header>
+            <header id="nav">
                     <ul class="menu">
                         <li><a href="#"><img src="img/logo.png" alt="logo" height="52px"></a></li>
                         <li><a href="#" class="active">Главная</a></li>
@@ -92,10 +92,8 @@
                         <button class="btn" onclick="filterSelection('mousse')"> Муссовые</button>
                         <button class="btn" onclick="filterSelection('cream')"> Кремовые</button>
                         <button class="btn" onclick="filterSelection('berry')"> Ягодные</button>
-                    </div>
-                    
 
-                    <select id="selectvalue">
+                        <select id="selectvalue">
                         <option>Все</option>
                         <option>Бисквитные</option>
                         <option>Шоколадные</option>
@@ -103,9 +101,8 @@
                         <option>Кремовые</option>
                         <option>Ягодные</option>
                     </select>
+                    </div>
                     
-                
-
                 <div class="cakes">
                     <div class="content-cake biscuit">
                         <img src="img/cake-1.png" alt="1">
@@ -195,13 +192,9 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake mousse">Арбуз</div>
-                    <div class="content-cake mousse cream">Киви</div>
-                    <div class="content-cake mousse">Банан</div>
-                    <div class="content-cake mousse">Лимон</div>
-                    <div class="content-cake cream">Корова</div>
+                    
                 </div>
-                <!--<h6 class="slaid">1 2 3 4 5</h6>-->
+                <h6 class="slaid">1 2 3 4 5</h6>
             </div>
         </div>
 
@@ -288,11 +281,14 @@
             <div class="content-6">
                 <h1>Оформить заказ</h1>
                 <div class="form">
-                    <input type="text" placeholder="Имя" name="name" required>
-                    <input type="text" placeholder="Телефон" name="phone" required>
-                    <button>Заказать</button>
-                    <p>Нажимая на кнопку, Вы даете согласие<br> на обработку 
+                    <form action="order.html">
+                        <input type="text" id="fname" placeholder="Имя" name="name" required>
+                        <input type="text" id="lname" placeholder="Телефон" name="phone" required>
+                        <input class="button" type="submit" value="Заказать">
+                        <p>Нажимая на кнопку, Вы даете согласие<br> на обработку 
                         <span class="pd">персональных данных</span></p>
+                    </form>
+                    
                 </div>
                 
             </div>
