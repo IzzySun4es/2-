@@ -85,38 +85,40 @@
             <div class="content-4">
                 <h1>Каталог</h1>
                 <p>Закажите торты по выгодной цене</p>
-                <div class="catalog">
-                    <ul>
-                        <li>Все</li>
-                        <li>Бисквитные</li>
-                        <li>Шоколадные</li>
-                        <li>Муссовые</li>
-                        <li>Кремовые</li>
-                        <li>Ягодные</li>
-                    </ul>
-                    <select id="selectvalue">
+                    <div id="catalog">
+                        <button class="btn active" onclick="filterSelection('all')"> Все</button>
+                        <button class="btn" onclick="filterSelection('biscuit')"> Бисквитные</button>
+                        <button class="btn" onclick="filterSelection('chocolate')"> Шоколадные</button>
+                        <button class="btn" onclick="filterSelection('mousse')"> Муссовые</button>
+                        <button class="btn" onclick="filterSelection('cream')"> Кремовые</button>
+                        <button class="btn" onclick="filterSelection('berry')"> Ягодные</button>
+                    </div>
+                    
+
+                    <!--<select id="selectvalue">
                         <option>Все</option>
                         <option>Бисквитные</option>
                         <option>Шоколадные</option>
                         <option>Муссовые</option>
                         <option>Кремовые</option>
                         <option>Ягодные</option>
-                    </select>
-                </div>
+                    </select>-->
+                    
+                
 
                 <div class="cakes">
-                    <div class="content-cake">
+                    <div class="content-cake biscuit">
                         <img src="img/cake-1.png" alt="1">
                         <p>“Восхитительный Крем”</p>
                         <p>1000 руб</p>
-                        <button class="set-first">Состав</button>
+                        <button class="set active">Состав</button>
                         <div class="content-button">
                             <button class="plus">- 1 +</button>
                             <button class="korsina">В корзину</button>
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake chocolate mousse">
                         <img src="img/cake-2.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>800 руб</p>
@@ -127,7 +129,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake biscuit">
                         <img src="img/cake-3.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>900 руб</p>
@@ -138,7 +140,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake chocolate">
                         <img src="img/cake-4.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>500 руб</p>
@@ -149,7 +151,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake biscuit cream">
                         <img src="img/cake-5.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>1000 руб</p>
@@ -160,7 +162,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake chocolate">
                         <img src="img/cake-6.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>800 руб</p>
@@ -171,7 +173,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake cream">
                         <img src="img/cake-7.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>900 руб</p>
@@ -182,7 +184,7 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="content-cake">
+                    <div class="content-cake  cream">
                         <img src="img/cake-8.png" alt="1">
                         <p>“Ягодный Мир”</p>
                         <p>500 руб</p>
@@ -193,8 +195,13 @@
                         </div>
                         <hr>
                     </div>
+                    <div class="content-cake mousse">Арбуз</div>
+                    <div class="content-cake mousse cream">Киви</div>
+                    <div class="content-cake mousse">Банан</div>
+                    <div class="content-cake mousse">Лимон</div>
+                    <div class="content-cake cream">Корова</div>
                 </div>
-                <h6 class="slaid">1 2 3 4 5</h6>
+                <!--<h6 class="slaid">1 2 3 4 5</h6>-->
             </div>
         </div>
 

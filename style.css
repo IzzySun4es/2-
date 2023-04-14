@@ -179,27 +179,17 @@ header ul li a{
     margin: 24px 0 20px 0;
     font-family: 'Lato' sans-serif;
 }
-.catalog{
+#catalog{
     margin-bottom: 58px;
     max-width: 100%;
     max-height: 47px;
     background-color: var(--secon-color);
 }
-.catalog ul{
+#catalog.button{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 850px;
-    list-style: none;
-    
-}
-.catalog li{
-    opacity: .7;
-}
-.catalog li:nth-child(1){
-    background-color: var(--pink-color);
-    padding: 14px 50px;
-
+    max-width: 850px; 
 }
 .cakes{
     display: flex;
@@ -207,27 +197,47 @@ header ul li a{
     justify-content: center;
 }
 .content-cake{
-    margin-right: 20px;
+    margin-right: 16px;
+    display: none; /* Скрыто по умолчанию */
 }
-.content-cake:nth-child(4n){
-    margin-right: 0px;
+.show {
+    display: block;
 }
-.set-first{
+/* Стиль кнопок */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 45px;
+    cursor: pointer;
+}
+  
+  /* Добавить светло-серый фон на наведении курсора мыши */
+  .btn:hover {
+    background-color: #E93F68;
+}
+  
+  /* Добавить темный фон для активной кнопки */
+.btn.active {
+    background-color: #E93F68;
+    color: white;
+}
+.set.active{
     padding: 10px 74px;
     background-color: var(--secon-color);
     border: var(--secon-color) 1px solid;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 22px 0 15px;
+    margin: 22px 0 15px 0;
     font-size: 1.25rem;
     opacity: .7;
 }
 .set{
     padding: 10px 74px;
     border: 1px solid var(--green-color);
-    margin: 22px 0 15px;
+    margin: 22px 0 15px  0;
     font-size: 1.25rem;
     opacity: .7;
     color: var(--pink-color);
+    cursor: pointer;
 }
 .content-button{
     display: flex;
