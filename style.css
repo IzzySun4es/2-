@@ -45,6 +45,13 @@ header{
     background-color: var(--secon-color);
     margin-top: 45px;
 }
+/*Липкое меню*/
+.sticky {
+    position: fixed;
+    top: -45px;
+    width: 90%;
+    z-index: 1;
+}
 header ul{
     display: flex;
     justify-content: space-around;
@@ -266,6 +273,17 @@ hr{
     border: 1px solid var(--green-color);
     margin: 47px 0 63px 0;
 }
+#button {
+    width: 200px;
+    line-height: 45px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 .slaid{
     font-size: 1.25rem;
     color: var(--pink-color);
@@ -355,19 +373,19 @@ input[type=submit]:hover {
     text-decoration: underline;
 }
 .content-6::before {
-    width: 985px;
+    width: 930px;
     max-width: 100%;
-    height: 501px;
+    height: 482px;
 
     background-image: url('img/bottom-background.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 100px center;
+    background-position: center;
 
     content: '';
     display: block;
     position: absolute;
-    top: 4424px;
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
 
@@ -420,7 +438,7 @@ input[type=submit]:hover {
     content: '';
     display: block;
     position: absolute;
-    top: 5083px;
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
 
@@ -449,10 +467,7 @@ select{
         background-position: center;
         top: 575px;
     }
-    .content-6::before{
-        background-position: center;
-        top: 5788px;
-    }
+   
 }
 @media screen and (max-width: 666px) {
     .reviews{
@@ -542,10 +557,4 @@ button.burger.open .line-3{
     header ul li:nth-child(1){
         display: none;
     }
-}
-.sticky {
-    position: fixed;
-    top: -45px;
-    width: 90%;
-    z-index: 1;
 }
