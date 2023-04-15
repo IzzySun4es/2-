@@ -104,14 +104,11 @@ header ul li a{
 .content-1 button{
     width: 256px;
     height: 71px;
-    background: var(--pink-color);
     border: none;
-    box-shadow: 7px -5px 14px 3px rgba(74, 13, 9, 0.25);
-
     font-size: 1.5rem;
     color: white;
-
-    margin: 28px 0 17px ;
+    margin: 28px 0 17px 0;
+    cursor: pointer;
 }
 .content-1 p{
     font-size: 0.75rem;
@@ -262,12 +259,18 @@ header ul li a{
     opacity: .9;
     font-size: 0.9rem;
 }
+.korsina:hover{
+    background: #a82340;
+}
 .plus{
     border: 1px solid var(--green-color);
     padding: 6px 15px;
     color: var(--pink-color);
     opacity: .7;
     font-size: 0.9rem;
+}
+.plus:hover{
+    background-color: var(--secon-color);
 }
 hr{
     border: 1px solid var(--green-color);
@@ -276,13 +279,16 @@ hr{
 #button {
     width: 200px;
     line-height: 45px;
-    background-color: var(--secondary-color);
+    background-color: var(--pink-color);
     border: none;
     color: #fff;
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+#button:hover {
+    background-color: #a82340;
 }
 .slaid{
     font-size: 1.25rem;
@@ -558,3 +564,93 @@ button.burger.open .line-3{
         padding: 18px 20px;
     }
 }
+/*Кнопка*/
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    background: transparent;
+
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  /* 3 */
+  .btn-3 {
+    background: var(--secondary-color);
+    background: linear-gradient(0deg, var(--pink-color) 0%, var(--secondary-color) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn-3 a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: var(--pink-color);
+    transition: all 0.3s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+    background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 span:hover{
+     color: var(--pink-color);
+  }
+  .btn-3 a:hover{
+    color: var(--pink-color);
+ }
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: var(--pink-color);
+    transition: all 0.3s ease;
+  }
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+  
