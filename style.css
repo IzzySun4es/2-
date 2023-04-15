@@ -202,7 +202,7 @@ header ul li a{
     justify-content: center;
 }
 .content-cake{
-    margin-right: 16px;
+    margin-right: 11px;
     display: none; /* Скрыто по умолчанию */
 }
 .show {
@@ -230,7 +230,7 @@ header ul li a{
     padding: 12px 40px;
 }
 .set:hover{
-    padding: 10px 74px;
+    padding: 10px 70px;
     background-color: var(--secon-color);
     border: var(--secon-color) 1px solid;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -239,7 +239,7 @@ header ul li a{
     opacity: .7;
 }
 .set{
-    padding: 10px 74px;
+    padding: 10px 70px;
     border: 1px solid var(--green-color);
     margin: 22px 0 15px  0;
     font-size: 1.25rem;
@@ -275,6 +275,17 @@ header ul li a{
 hr{
     border: 1px solid var(--green-color);
     margin: 47px 0 63px 0;
+}
+ol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+ol li{
+    font-size: 1rem;
+    opacity: .7;
+    margin-bottom: 10px;
 }
 #button {
     width: 200px;

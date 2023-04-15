@@ -89,5 +89,7 @@ window.onload = function () {
 
   })
 }
-
-
+/*Раскрывающийся список Состава */
+details.addEventListener("toggle", () => {
+  details.open ? thisCoolThing() : thisOtherThing();
+})
