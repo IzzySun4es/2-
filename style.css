@@ -354,7 +354,7 @@ input[type=text]{
     resize: vertical;
 }
 input[type=submit]{
-    width: 290px;
+    width: 270px;
     height: 60px;
     background: var(--pink-color);
     border: none;
@@ -467,6 +467,9 @@ select{
         background-position: center;
         top: 575px;
     }
+    .content-6::before, .content-7::before{
+        display: none;
+    }
    
 }
 @media screen and (max-width: 666px) {
@@ -477,16 +480,10 @@ select{
         background: none;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
-    .btn{
-        display: none;
-    }
-    select{
-        border: none;
-        display: flex;
-        background-color: var(--secondary-color);
-        padding: 14px 50px;
-    }
+
+ 
 }
 button.burger{
     border: none;
@@ -556,5 +553,8 @@ button.burger.open .line-3{
     }
     header ul li:nth-child(1){
         display: none;
+    }
+    input[type=text]{
+        padding: 18px 20px;
     }
 }
