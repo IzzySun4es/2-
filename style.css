@@ -11,8 +11,8 @@ body{
     --background-color: #FDEFEE;
     --main-color: #29251C;
     --pink-color: #E93F68;
-    --secondary-color: #F29CB0;
-    --secon-color: rgba(242, 156, 176, 0.4);
+    --secondary-color: #ff90aa;
+    --secon-color: rgb(240, 172, 189);
     --green-color: #89A8A2;
 }
 
@@ -39,7 +39,7 @@ h1,p, h6{
     margin: 0 auto;
 }
 header{
-    max-width: 100%;
+    max-width: 940px;
     max-height: 52px;
     border: none;
     background-color: var(--secon-color);
@@ -547,4 +547,5 @@ button.burger.open .line-3{
     position: fixed;
     top: -45px;
     width: 90%;
+    z-index: 1;
 }
