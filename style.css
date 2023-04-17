@@ -59,10 +59,14 @@ header ul{
     list-style: none;
     max-width: 880px;
 }
-header ul li a.active{
+/*header ul li a.active{
     border: var(--pink-color) 1px solid;
     background-color: var(--background-color);
     padding: 16px 40px;
+    opacity: .9;
+}*/
+header ul li a:hover{
+    color: var(--pink-color);
     opacity: .9;
 }
 header ul li a{
