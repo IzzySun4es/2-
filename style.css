@@ -374,6 +374,7 @@ input[type=text]{
     font-size: 1.25rem;
     resize: vertical;
 }
+
 input[type=submit]{
     width: 270px;
     height: 60px;
