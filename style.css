@@ -354,6 +354,8 @@ ol li{
     padding: 29px 0 39px 0;
     max-width: 100%;
     margin: 170px 0;
+    background-color: #fff;
+    opacity: .8;
 }
 .content-6 h1{
     margin: 30px 0 25px 0;
