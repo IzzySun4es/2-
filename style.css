@@ -278,7 +278,7 @@ header ul li a{
 }
 hr{
     border: 1px solid var(--green-color);
-    margin: 47px 0 63px 0;
+    margin: 35px 0 63px 0;
 }
 ol{
     display: flex;
