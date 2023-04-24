@@ -38,19 +38,20 @@ h1,p, h6{
     max-width: 100%;
     margin: 0 auto;
 }
-header{
-    max-width: 940px;
-    max-height: 52px;
-    border: none;
-    background-color: var(--secon-color);
-    margin-top: 45px;
-}
 /*Липкое меню*/
 .sticky {
     position: fixed;
     top: -45px;
     width: 90%;
     z-index: 1;
+}
+/*Шапка*/
+header{
+    max-width: 940px;
+    max-height: 52px;
+    border: none;
+    background-color: var(--secon-color);
+    margin-top: 45px;
 }
 header ul{
     display: flex;
@@ -59,12 +60,6 @@ header ul{
     list-style: none;
     max-width: 880px;
 }
-/*header ul li a.active{
-    border: var(--pink-color) 1px solid;
-    background-color: var(--background-color);
-    padding: 16px 40px;
-    opacity: .9;
-}*/
 header ul li a:hover{
     color: var(--pink-color);
     opacity: .9;
@@ -74,7 +69,6 @@ header ul li a{
     color: var(--main-color);
     opacity: .7;
 }
-
 .content-1 img {
     position: fixed;
     margin-top: -530px;
@@ -82,6 +76,39 @@ header ul li a{
     z-index: 0;
     pointer-events: none;
 }
+/*бургер*/
+button.burger{
+    border: none;
+    width: 40px;
+    height: 28px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transform: translateX(0px);
+    transition: .3s;
+}
+button.burger.open{
+    transform: translateX(-20px);
+}
+button.burger .line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: .3s;
+}
+button.burger.open .line-2{
+    width: 0px;
+}
+button.burger.open .line-1{
+   transform: rotateZ(45deg) translateX(45%);
+}
+button.burger.open .line-3{
+    transform: rotateZ(-45deg) translateX(45%);
+}
+/*Главный блок*/
 .content-1{
     margin-top: 44%;
     margin-left: 25%
@@ -90,19 +117,16 @@ header ul li a{
     width: 1300.64px;
     max-width: 100%;
     height: 771.37px;
-
     background-image: url('../img/main-background.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100px center;
-
     content: '';
     display: block;
     position: absolute;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-
     z-index: -1;
 }
 .content-1 button{
@@ -119,11 +143,96 @@ header ul li a{
     max-width: 251px;
     text-align: center;
 }
-
+/*Кнопка главного блока*/
+/*Кнопка*/
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+.btn-3 {
+    background: var(--secondary-color);
+    background: linear-gradient(0deg, var(--pink-color) 0%, var(--secondary-color) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none; 
+}
+.btn-3 a{
+    text-decoration: none;
+    color: white;
+}
+.btn-3:before,
+.btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: var(--pink-color);
+    transition: all 0.3s ease;
+}
+.btn-3:before {
+    height: 0%;
+    width: 2px;
+}
+.btn-3:after {
+    width: 0%;
+    height: 2px;
+}
+.btn-3:hover{
+    background: transparent;
+    box-shadow: none;
+}
+.btn-3:hover:before {
+    height: 100%;
+}
+.btn-3:hover:after {
+    width: 100%;
+}
+.btn-3 span:hover{
+     color: var(--pink-color);
+}
+.btn-3 a:hover{
+    color: var(--pink-color);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: var(--pink-color);
+    transition: all 0.3s ease;
+}
+.btn-3 span:before {
+    width: 2px;
+    height: 0%;
+}
+.btn-3 span:after {
+    width: 0%;
+    height: 2px;
+}
+.btn-3 span:hover:before {
+    height: 100%;
+}
+.btn-3 span:hover:after {
+    width: 100%;
+}
+/*Преимущества*/
 .content-2 h1, .content-4 h1, .content-5 h1, .content-6 h1{
     margin: 190px 0 70px 0;
     text-align: center;
-
 }
 .advantagt{
     display: flex;
@@ -145,21 +254,19 @@ header ul li a{
     width: 1480px;
     max-width: 100%;
     height: 847px;
-
     background-image: url('../img/drag-background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     content: '';
     display: block;
     position: absolute;
     top: 750px;
     left: 50%;
     transform: translateX(-50%);
-
     z-index: -1;
 }
+/*О нас*/
 .content-3{
     display: flex;
     flex-direction: column;
@@ -178,6 +285,7 @@ header ul li a{
 .content-3 h1, .content-3 p, .content-4 h1, .content-4 p, .content-5 h1, .content-6 h1{
     text-align: center;
 }
+/*Каталог*/
 .content-4{
     display: flex;
     flex-direction: column;
@@ -219,15 +327,10 @@ header ul li a{
     cursor: pointer;
     background: none;
     padding: 12px 20px;
-
 }
-  
-  /* Добавить светло-серый фон на наведении курсора мыши */
 .btn:hover {
     background-color: #E93F68;
 }
-  
-  /* Добавить темный фон для активной кнопки */
 .btn.active {
     background-color: #E93F68;
     color: white;
@@ -251,31 +354,6 @@ header ul li a{
     color: var(--pink-color);
     cursor: pointer;
 }
-.content-button{
-    display: flex;
-    justify-content: space-between;
-}
-.korsina{
-    padding: 6px 35px;
-    border: none;
-    background-color: var(--pink-color);
-    color: white;
-    opacity: .9;
-    font-size: 0.9rem;
-}
-.korsina:hover{
-    background: #a82340;
-}
-.plus{
-    border: 1px solid var(--green-color);
-    padding: 6px 15px;
-    color: var(--pink-color);
-    opacity: .7;
-    font-size: 0.9rem;
-}
-.plus:hover{
-    background-color: var(--secon-color);
-}
 hr{
     border: 1px solid var(--green-color);
     margin: 35px 0 63px 0;
@@ -291,6 +369,7 @@ ol li{
     opacity: .7;
     margin-bottom: 10px;
 }
+/*Отзывы*/
 #button {
     width: 200px;
     line-height: 45px;
@@ -304,12 +383,6 @@ ol li{
 }
 #button:hover {
     background-color: #a82340;
-}
-.slaid{
-    font-size: 1.25rem;
-    color: var(--pink-color);
-    margin-top: 40px;
-    text-align  : center;
 }
 .reviews{
     display: flex;
@@ -332,7 +405,6 @@ ol li{
     background-color: var(--secondary-color);
     padding: 35px 21px;
     margin-bottom: 37px;
-
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -349,6 +421,7 @@ ol li{
 .content-5 h1{
     margin-bottom: 60px;
 }
+/*Оформление заказа*/
 .content-6{
     border: 2px solid var(--pink-color);
     padding: 29px 0 39px 0;
@@ -376,7 +449,6 @@ input[type=text]{
     font-size: 1.25rem;
     resize: vertical;
 }
-
 input[type=submit]{
     width: 270px;
     height: 60px;
@@ -388,7 +460,7 @@ input[type=submit]{
 }
 input[type=submit]:hover {
     background-color: #a82340;
-  }
+}
 .form p{
     font-size: 0.75rem;
 }
@@ -400,21 +472,19 @@ input[type=submit]:hover {
     width: 930px;
     max-width: 100%;
     height: 482px;
-
     background-image: url('../img/bottom-background.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
     content: '';
     display: block;
     position: absolute;
     bottom: auto;
     left: 50%;
     transform: translateX(-50%);
-
     z-index: -1;
 }
+/*Футер*/
 .content-7{
     display: flex;
     justify-content: center;
@@ -453,24 +523,22 @@ input[type=submit]:hover {
     width: 940px;
     max-width: 100%;
     height: 250px;
-
     background-image: url('../img/footer-background.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
     content: '';
     display: block;
     position: absolute;
     bottom: auto;
     left: 50%;
     transform: translateX(-50%);
-
     z-index: -1;
 }
 select{
     display: none;
 }
+/*Адаптация*/
 @media screen and (max-width: 768px) {
     :root{
         font-size: 14px;
@@ -494,7 +562,6 @@ select{
     .content-6::before, .content-7::before{
         display: none;
     }
-   
 }
 @media screen and (max-width: 666px) {
     .reviews{
@@ -506,39 +573,6 @@ select{
         justify-content: center;
         flex-wrap: wrap;
     }
-
- 
-}
-button.burger{
-    border: none;
-    width: 40px;
-    height: 28px;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    transform: translateX(0px);
-    transition: .3s;
-}
-button.burger.open{
-    transform: translateX(-20px);
-}
-button.burger .line{
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transition: .3s;
-}
-button.burger.open .line-2{
-    width: 0px;
-}
-button.burger.open .line-1{
-   transform: rotateZ(45deg) translateX(45%);
-}
-button.burger.open .line-3{
-    transform: rotateZ(-45deg) translateX(45%);
 }
 @media screen and (max-width:576px){
     header{
@@ -554,11 +588,9 @@ button.burger.open .line-3{
         z-index: 2;
         padding: 20px 10px;
         width: 100px;
-
         transform: translateY(100%);
         opacity: 0;
         pointer-events: none;
-
         transition: .3s;
     }
     header ul.menu.open{
@@ -582,93 +614,5 @@ button.burger.open .line-3{
         padding: 18px 20px;
     }
 }
-/*Кнопка*/
-.custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    background: transparent;
 
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-    outline: none;
-  }
-  /* 3 */
-  .btn-3 {
-    background: var(--secondary-color);
-    background: linear-gradient(0deg, var(--pink-color) 0%, var(--secondary-color) 100%);
-    width: 130px;
-    height: 40px;
-    line-height: 42px;
-    padding: 0;
-    border: none;
-    
-  }
-  .btn-3 a{
-    text-decoration: none;
-    color: white;
-  }
-
-  .btn-3:before,
-  .btn-3:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    background: var(--pink-color);
-    transition: all 0.3s ease;
-  }
-  .btn-3:before {
-    height: 0%;
-    width: 2px;
-  }
-  .btn-3:after {
-    width: 0%;
-    height: 2px;
-  }
-  .btn-3:hover{
-    background: transparent;
-    box-shadow: none;
-  }
-  .btn-3:hover:before {
-    height: 100%;
-  }
-  .btn-3:hover:after {
-    width: 100%;
-  }
-  .btn-3 span:hover{
-     color: var(--pink-color);
-  }
-  .btn-3 a:hover{
-    color: var(--pink-color);
- }
-  .btn-3 span:before,
-  .btn-3 span:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    background: var(--pink-color);
-    transition: all 0.3s ease;
-  }
-  .btn-3 span:before {
-    width: 2px;
-    height: 0%;
-  }
-  .btn-3 span:after {
-    width: 0%;
-    height: 2px;
-  }
-  .btn-3 span:hover:before {
-    height: 100%;
-  }
-  .btn-3 span:hover:after {
-    width: 100%;
-  }
   
