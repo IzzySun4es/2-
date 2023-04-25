@@ -504,7 +504,7 @@ input[type=submit]:hover {
 .contacts-2{
     display: flex;
 }
-.contacts-2 li{
+.contacts-2 a{
     margin-right: 10px;
 }
 .content-7 ul{
