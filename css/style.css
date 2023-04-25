@@ -501,10 +501,10 @@ input[type=submit]:hover {
     font-size: 1rem;
     opacity: .7;
 }
-.content-7 ul div ul{
+.contacts-2{
     display: flex;
 }
-.content-7 ul div ul li{
+.contacts-2 li{
     margin-right: 10px;
 }
 .content-7 ul{
