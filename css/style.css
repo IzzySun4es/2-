@@ -15,13 +15,17 @@ body{
     --secon-color: rgb(240, 172, 189);
     --green-color: #89A8A2;
 }
-
 *{
     font-family: 'Lato' sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border-radius: 50px;
+}
+.container{
+    width: 940px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 h1{
     font-family: 'PT Serif', serif;
@@ -33,11 +37,7 @@ p{
 h1,p, h6{
     color: var(--main-color);
 }
-.container{
-    width: 940px;
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 /*Липкое меню*/
 .sticky {
     position: fixed;
@@ -501,10 +501,10 @@ input[type=submit]:hover {
     font-size: 1rem;
     opacity: .7;
 }
-.content-7 ul div{
+.content-7 ul div ul{
     display: flex;
 }
-.content-7 ul div li{
+.content-7 ul div ul li{
     margin-right: 10px;
 }
 .content-7 ul{

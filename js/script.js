@@ -6,6 +6,7 @@ function toggleMenu(){
     burger.classList.toggle('open');
     menu.classList.toggle('open');
 }
+
 /* Липкое меню*/
 window.onscroll = function() {myFunction()};
 
@@ -20,19 +21,19 @@ function myFunction() {
   }
 }
 
-/*каталог */
+/*Сортировка каталога */
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("content-cake");
   if (c == "all") c = "";
-  // Добавить класс "show" (display:block) к отфильтрованным элементам и удалите класс "show" из элементов, которые не выбраны
+  // Добавить класс "show" (display:block) к отфильтрованным элементам 
+  //и удалите класс "show" из элементов, которые не выбраны
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
 }
-
 // Показать отфильтрованные элементы
 function w3AddClass(element, name) {
   var i, arr1, arr2;
@@ -44,7 +45,6 @@ function w3AddClass(element, name) {
     }
   }
 }
-
 // Скрыть элементы, которые не выбраны
 function w3RemoveClass(element, name) {
   var i, arr1, arr2;
@@ -57,7 +57,6 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-
 // Добавить активный класс к текущей кнопке управления (выделите ее)
 var btnContainer = document.getElementById("catalog");
 var btns = btnContainer.getElementsByClassName("btn");
@@ -68,8 +67,8 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-/*показать еще */
 
+/*Кнопка "показать еще" */
 window.onload = function () {
   var box=document.getElementsByClassName('box');
   var btn=document.getElementById('button');
@@ -89,6 +88,7 @@ window.onload = function () {
 
   })
 }
+
 /*Раскрывающийся список Состава */
 details.addEventListener("toggle", () => {
   details.open ? thisCoolThing() : thisOtherThing();
