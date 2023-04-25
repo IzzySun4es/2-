@@ -69,12 +69,8 @@ header ul li a{
     color: var(--main-color);
     opacity: .7;
 }
-.content-1 img {
-    position: fixed;
-    margin-top: -530px;
-    margin-left: -333px;
-    z-index: 0;
-    pointer-events: none;
+.logotip{
+    height: 52px;
 }
 /*бургер*/
 button.burger{
@@ -112,6 +108,13 @@ button.burger.open .line-3{
 .content-1{
     margin-top: 44%;
     margin-left: 25%
+}
+.content-1 img {
+    position: fixed;
+    margin-top: -530px;
+    margin-left: -333px;
+    z-index: 0;
+    pointer-events: none;
 }
 .content-1::before {
     width: 1300.64px;
