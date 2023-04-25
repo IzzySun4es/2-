@@ -172,10 +172,6 @@ button.burger.open .line-3{
     padding: 0;
     border: none; 
 }
-.btn-3 a{
-    text-decoration: none;
-    color: white;
-}
 .btn-3:before,
 .btn-3:after {
     position: absolute;
